@@ -1,0 +1,30 @@
+{
+  "generated_at": "2026-10-28T08:18:28.420501Z",
+  "source": "Elexon Insights API",
+  "delivery_window_start": "2026-01-01T00:00:00Z",
+  "delivery_window_end_exclusive": "2026-02-01T00:00:00Z",
+  "analysis_grain": "hourly",
+  "forecast_selection": "latest publishTime <= previous day 23:59:59 UTC",
+  "expected_delivery_intervals": 744,
+  "status_counts": {
+    "matched": 744
+  },
+  "actuals": {
+    "raw_records": 1488,
+    "invalid_records": 0,
+    "non_wind_records": 0,
+    "duplicate_half_hour_records": 0,
+    "valid_half_hour_records": 1488,
+    "hourly_actual_intervals": 744,
+    "incomplete_hourly_actuals": 0
+  },
+  "forecasts": {
+    "raw_records": 36792,
+    "invalid_records": 0,
+    "duplicate_target_revision_records": 0,
+    "january_target_records": 18104,
+    "january_target_intervals": 744,
+    "no_eligible_forecast_intervals": 0,
+    "selected_forecast_intervals": 744
+  }
+}

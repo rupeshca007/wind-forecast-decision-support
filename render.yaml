@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: wellfound-wind-dashboard
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    healthCheckPath: /api/health
+    envVars:
+      - key: WIND_DATA_PATH
+        value: /app/data/processed/january_2026.csv
