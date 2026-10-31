@@ -2,6 +2,7 @@ services:
   - type: web
     name: wellfound-wind-dashboard
     runtime: docker
+    plan: free
     dockerfilePath: ./Dockerfile
     dockerContext: .
     healthCheckPath: /api/health
