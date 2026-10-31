@@ -243,6 +243,23 @@ docker run --rm -p 8000:8000 wellfound-wind-dashboard
 
 Open `http://localhost:8000`. For a cloud provider, map its assigned port to the container and keep the process command unchanged so `${PORT}` is honored.
 
+## Phase 11 release verification
+
+Phase 11 adds a repeatable smoke test for the deployed application. It checks the public dashboard, API readiness, normalized dataset status, and the complete January 2026 analysis response without requiring any credentials.
+
+Run it against the Render deployment with:
+
+```bash
+python scripts/verify_phase11.py \
+  --base-url https://wellfound-wind-dashboard.onrender.com
+```
+
+The release is ready to submit when the script reports four `PASS` checks and `Phase 11 deployment verification complete`. The final submission should include:
+
+- GitHub repository: `https://github.com/rupeshca007/wind-forecast-decision-support`
+- Live dashboard: `https://wellfound-wind-dashboard.onrender.com`
+- A short note describing the forecast-selection assumption and the January 2026 scope.
+
 ## Forecast-selection rule
 
 The assignment does not specify an exact market gate-closure time. To avoid look-ahead bias, the first version will use this explicit, configurable assumption:
